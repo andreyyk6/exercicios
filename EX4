@@ -1,0 +1,9 @@
+const numero = parseFloat(prompt("Digite um número:"));
+
+if (numero > 4) {
+    console.log("O número é positivo.");
+} else if (numero < 4) {
+    console.log("o número é negativo.");
+} else {
+    console.log("o número é zero.");
+}
