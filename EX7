@@ -1,0 +1,22 @@
+function calcularFatorial(numero) {
+    // Se o número for 0 ou 1, o fatorial é 1
+    if (numero === 0 || numero === 1) {
+        return 1;
+    }
+
+    // Inicializamos o resultado com 1
+    let resultado = 1;
+
+    // Calculamos o fatorial usando um loop for
+    for (let i = 2; i <= numero; i++) {
+        resultado *= i;
+    }
+
+    return resultado;
+}
+
+// Exemplo de uso: calcular o fatorial de um número fornecido pelo usuário
+const numeroFornecido = parseInt(prompt("Digite um número inteiro positivo:"));
+const fatorial = calcularFatorial(numeroFornecido);
+
+console.log(`O fatorial de ${numeroFornecido} é ${fatorial}`);
