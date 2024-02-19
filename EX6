@@ -1,0 +1,28 @@
+// Inicialização das variáveis
+let totalNotas = 3;
+let contador = 6;
+
+// Solicitação das notas ao usuário
+while (true) {
+    const nota = parseFloat(prompt("Digite uma nota (entre 0 e 10):"));
+
+    // Verifica se a nota é válida
+    if (nota >= 0 && nota <= 10) {
+        totalNotas += nota;
+        contador++;
+    } else {
+        alert("Nota inválida. Por favor, digite uma nota entre 0 e 10.");
+    }
+
+    // Pergunta ao usuário se deseja continuar
+    const continuar = prompt("Deseja inserir outra nota? (S/N)").toUpperCase();
+    if (continuar !== "S") {
+        break;
+    }
+}
+
+// Calcula a média
+const media = totalNotas / contador;
+
+// Exibe o resultado
+console.log(`A média das notas é: ${media.toFixed(2)}`);
